@@ -17,7 +17,7 @@
 1;
 #X obj 257 541 *~;
 #X obj 689 240 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6331 1;
+-1 -1 6293 1;
 #X obj 658 86 random 1000;
 #X floatatom 659 156 5 0 0 0 - - -;
 #X obj 660 113 / 1000;
@@ -35,7 +35,7 @@
 #X obj 854 136 - 0.5;
 #X floatatom 871 199 5 0 0 0 - - -;
 #X obj 854 220 *;
-#X obj 892 357 +;
+#X obj 897 447 +;
 #X obj 857 262 t b f;
 #X obj 367 247 sel 0 1;
 #X obj 519 452 s;
@@ -75,7 +75,7 @@
 #X obj 1050 200 t b f;
 #X obj 565 426 symbol \$1-loc;
 #X obj 789 324 r grainsize;
-#X obj 893 394 s \$0-grain_pitch;
+#X obj 898 484 s \$0-grain_pitch;
 #X obj 403 476 r \$0-grain_pitch;
 #X text 899 34 pitch controls;
 #X text 671 33 location controls;
@@ -134,6 +134,11 @@
 #X obj 689 471 %;
 #X floatatom 652 379 5 0 0 0 - - -;
 #X obj 526 343 r on_off;
+#X floatatom 911 519 5 0 0 0 - - -;
+#X obj 1012 302 r reset_pitch;
+#X obj 1020 335 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1021 358 1;
 #X connect 0 0 7 0;
 #X connect 1 0 4 0;
 #X connect 2 0 67 0;
@@ -171,6 +176,7 @@
 #X connect 31 0 25 0;
 #X connect 31 0 33 0;
 #X connect 32 0 72 0;
+#X connect 32 0 127 0;
 #X connect 33 0 32 0;
 #X connect 33 1 32 1;
 #X connect 34 0 107 0;
@@ -275,3 +281,6 @@
 #X connect 122 0 81 0;
 #X connect 124 0 77 0;
 #X connect 126 0 13 0;
+#X connect 128 0 129 0;
+#X connect 129 0 130 0;
+#X connect 130 0 32 0;
